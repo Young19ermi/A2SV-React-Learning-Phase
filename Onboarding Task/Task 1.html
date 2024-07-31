@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #4a90e2;
+      margin-bottom: 20px;
+    }
+
+    #task-input {
+      padding: 10px;
+      width: 300px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4a90e2;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    #task-list {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .task-label {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    .task-label[contenteditable="true"] {
+      border: 1px dashed #ccc;
+      background-color: #e9f5ff;
+    }
+
+    .task-item button {
+      margin-left: 10px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .task-item button:hover {
+      background-color: #e0e0e0;
+    }
+
+    .task-item .delete-button {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .task-item .delete-button:hover {
+      background-color: #c0392b;
+    }
+    
+    .task-item .edit-button {
+      background-color: #d4ac0d;
+      color: white;
+    }
+
+    .task-item .edit-button:hover {
+      background-color: #d4ac0d;
+    }
+
+    .task-item .save-button {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .task-item .save-button:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>Task List APP</h1>
+  
+  <div>
+    <input type="text" id="task-input" placeholder="Enter a new task" />
+    <button onclick="addTask()">Add Task</button>
+  </div>
+  <div id="task-list"></div>
+
+  <script>
+    const taskList = document.getElementById('task-list');
+    let tasks = [];
+
+    function addTask() {
+      const taskInput = document.getElementById('task-input');
+      const taskText = taskInput.value.trim();
+      if (taskText !== '') {
+        const taskItem = document.createElement('div');
+        taskItem.classList.add('task-item');
+
+        const taskLabel = document.createElement('span');
+        taskLabel.textContent = taskText;
+        taskLabel.setAttribute('contenteditable', 'false');
+        taskLabel.classList.add('task-label');
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-button');
+        deleteButton.addEventListener('click', () => {
+          removeTask(taskText);
+        });
+        
+        const saveButton = document.createElement('button');
+        saveButton.textContent = 'Save';
+        saveButton.classList.add('save-button');
+        saveButton.addEventListener('click', () => {
+          savetask(taskLabel);
+        });
+         
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.classList.add('edit-button');
+        editButton.addEventListener('click', () => {
+          makeTextEditable(taskLabel);
+        });
+        
+        
+
+        taskItem.appendChild(taskLabel);
+        taskItem.appendChild(deleteButton);
+        taskItem.appendChild(editButton);
+        taskItem.appendChild(saveButton);
+       
+        taskList.appendChild(taskItem);
+        //taskItem.appendChild(xButton);
+        tasks.push(taskText);
+        taskInput.value = '';
+      }
+    }
+
+    function removeTask(taskText) {
+      const taskItem = Array.from(taskList.children).find(item => item.textContent.includes(taskText));
+      if (taskItem) {
+        taskList.removeChild(taskItem);
+        tasks = tasks.filter(task => task !== taskText);
+      }
+    }
+    
+    function savetask(taskLabel){
+       taskLabel.removeEventListener('blur', saveChanges);
+    }
+    
+    function makeTextEditable(taskLabel) {
+      const originalText = taskLabel.textContent;
+      taskLabel.setAttribute('contenteditable', 'true');
+      taskLabel.focus();
+
+      const saveChanges = () => {
+        taskLabel.setAttribute('contenteditable', 'false');
+        const newText = taskLabel.textContent.trim();
+        if (newText !== originalText) {
+          const index = tasks.indexOf(originalText);
+          if (index !== -1) {
+            tasks[index] = newText;
+          }
+        }
+        taskLabel.removeEventListener('blur', saveChanges);
+      };
+
+      taskLabel.addEventListener('blur', saveChanges);
+    }
+  </script>
+</body>
+</html>
