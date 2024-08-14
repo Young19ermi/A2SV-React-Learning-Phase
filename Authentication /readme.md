@@ -2,7 +2,9 @@
 
 # 🚀 Job Portal Website
 
-A simple and efficient job portal built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This platform allows users to explore a variety of job positions, bookmark their favorites, and manage their accounts with seamless authentication.
+A simple job portal website built with Next.js, TypeScript, and Tailwind CSS. It provides a list of available job positions for users to find and a feature that allows them to bookmark jobs they like. The job details are stored in a remote API and include user authentication.
+
+This project aims to create a user-friendly and efficient job search platform, making it easier for job seekers to discover and apply for suitable positions. The website offers a clean and modern interface, allowing users to browse through job listings, view detailed job descriptions, and save their favorite job postings for future reference.
 
 ## 📸 Screenshots of the Pages
 ![Screenshot 2024-08-04 174353](https://github.com/user-attachments/assets/5f8efc44-e520-4933-a706-c0b48acf63d9)
@@ -11,7 +13,7 @@ A simple and efficient job portal built with **Next.js**, **TypeScript**, and **
 ![Screenshot 2024-08-14 124841](https://github.com/user-attachments/assets/e8209084-8cb0-4146-a828-7df739e6588b)
 ![Screenshot 2024-08-14 124801](https://github.com/user-attachments/assets/846b040e-e948-4b75-849f-2392d30dc28a)
 ![Screenshot 2024-08-14 124747](https://github.com/user-attachments/assets/db27c369-8cd1-4f8e-a83b-d86696e90346)
-![Screenshot 2024-08-14 124727](https://github.com/user-attachments/assets/fb6be674-d5c7-4e51-bc42-1f2d71925698)
+
 
 
 - **/jobs** - 🗒️ **Job Listings**  
