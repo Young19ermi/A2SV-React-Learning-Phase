@@ -1,92 +1,93 @@
-![alt text](<Screenshot 2024-08-07 141014.png>) 
-![alt text](<Screenshot 2024-08-07 140923.png>) 
-![alt text](<Screenshot 2024-08-07 140943.png>) 
-![alt text](<Screenshot 2024-08-07 141145.png>)
-# Job Listing Application
-
-Welcome to the Job Listing Application! This project is designed to provide users with a comprehensive list of job opportunities, including detailed views of job descriptions, responsibilities, and ideal candidate traits. The application leverages both Google and database authentication for user management.
 
 
-## Features
+# 🚀 Job Portal Website
 
-- List of job postings
-- Detailed job description view
-- Job responsibilities and ideal candidate traits
-- Job location and timing details
-- Dynamic job count update
-- **Bookmark functionality**: Users can bookmark job listings for quick access later.
-- **Favorites page**: A dedicated page to view all bookmarked jobs, accessible only to logged-in users.
-- User authentication via Google and database
+A simple job portal website built with Next.js, TypeScript, and Tailwind CSS. It provides a list of available job positions for users to find and a feature that allows them to bookmark jobs they like. The job details are stored in a remote API and include user authentication.
 
-## Technologies Used
+This project aims to create a user-friendly and efficient job search platform, making it easier for job seekers to discover and apply for suitable positions. The website offers a clean and modern interface, allowing users to browse through job listings, view detailed job descriptions, and save their favorite job postings for future reference.
 
-- React
-- Next.js (with app route)
-- TypeScript
-- Tailwind CSS
-- Node.js
-- JSON for job data storage
-- NextAuth.js for authentication
-- Jest for unit testing
-- Cypress for end-to-end testing
-
-## Authentication
-
-The application supports user authentication through:
-
-- **Google Sign-In**: Allows users to sign in using their Google accounts.
-- **Database Authentication**: Users can also log in using credentials stored in the application's database.
-
-### Authentication Setup
-
-1. **Google Authentication**:
-   - Integrated using NextAuth.js with GoogleProvider.
-   - Ensure to set up your Google API credentials and add them to your environment variables.
-
-2. **Database Authentication**:
-   - Implemented using NextAuth.js with CredentialsProvider.
-   - Ensure the backend service is set up to handle authentication requests and store user credentials securely.
+## 📸 Screenshots of the Pages
+![Screenshot 2024-08-04 174353](https://github.com/user-attachments/assets/5f8efc44-e520-4933-a706-c0b48acf63d9)
+![1](https://github.com/user-attachments/assets/fae8daa8-5655-4426-b561-831f97e2ccfc)
+![Screenshot 2024-08-14 130554](https://github.com/user-attachments/assets/f75b463c-d6f2-4945-a26a-9d32b3c9f1b5)
+![Screenshot 2024-08-14 124841](https://github.com/user-attachments/assets/e8209084-8cb0-4146-a828-7df739e6588b)
+![Screenshot 2024-08-14 124801](https://github.com/user-attachments/assets/846b040e-e948-4b75-849f-2392d30dc28a)
+![Screenshot 2024-08-14 124747](https://github.com/user-attachments/assets/db27c369-8cd1-4f8e-a83b-d86696e90346)
 
 
-## Bookmark & Favorites
 
-- **Bookmarking**: Users can bookmark job listings by clicking on the bookmark icon. Bookmarked jobs can be accessed from the Favorites page.
-![alt text](<Screenshot 2024-08-12 134432.png>)
+- **/jobs** - 🗒️ **Job Listings**  
+  A list of all available job positions.
 
-- **Favorites Page**: Only accessible to logged-in users, this page shows all jobs that the user has bookmarked.
-![alt text](<Screenshot 2024-08-12 134402.png>) 
+- **/description/[id]** - 🔍 **Job Description**  
+  Detailed descriptions of each job position.
 
+- **Sign Up** - 🔐 **Create Account**  
+  Users can register for an account.
 
-## Testing
+- **OTP Verification** - 📞 **Secure Authentication**  
+  Verifies user identity via OTP.
 
-The application is thoroughly tested using both unit and end-to-end tests:
+- **Sign In** - 🔒 **Access Account**  
+  Users can sign in to their account.
 
-![alt text](<Screenshot 2024-08-12 134632.png>)
-- **Jest**: Used for unit testing of individual components and utility functions.
-![alt text](<Screenshot 2024-08-12 134558.png>) 
-- **Cypress**: Used for end-to-end testing, ensuring that the user experience is smooth from login to job searching, bookmarking, and more.
-
-## Usage
-
-Once the application is running, you can:
-
-- **Authenticate**: Use Google Sign-In or login with database credentials.
-- **View Job Listings**: Access the main page to see a list of job postings.
-- **View Job Details**: Click on any job to view detailed information, including descriptions, responsibilities, ideal candidate traits, and location/timing details.
-- **Bookmark Jobs**: Save jobs to view later in the Favorites page.
-- **Access Favorites**: Navigate to the Favorites page to see all your bookmarked jobs.
-
-### Components
-
-- **JobCard**: Displays a brief overview of each job.
-- **JobDetail**: Shows detailed information about a selected job.
-- **JobList**: Fetches and displays the list of jobs.
-- **Favorites**: Displays all jobs that the user has bookmarked.
-- **About**: Displays additional information about the job.
-
-### Pages
-
-- **index.tsx**: The main page that renders the job list.
-- **favorites.tsx**: A page that displays the user's bookmarked jobs.
+- **Favorites** - 💖 **Bookmarked Jobs**  
+  A list of jobs users have saved for future reference.
 
 ---
+
+## ✨ Features
+
+- **💼 Job Listings**: Browse through available job positions.
+- **🔍 Job Descriptions**: In-depth details for each job.
+- **🧭 User Navigation**: Smooth transitions between listings and job details.
+- **💾 Job Bookmark**: Save favorite jobs for later.
+- **🔑 User Authentication**: Account creation, sign-in, and security with OTP.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Next.js**: React framework for server-rendered applications.
+- **TypeScript**: Strongly typed JavaScript for reliability and scalability.
+- **Tailwind CSS**: A utility-first CSS framework for designing modern UIs.
+- **React Icons**: Iconography for enhanced visual presentation.
+- **NextAuth**: Authentication library for OAuth providers.
+- **React Hook Form**: Efficient form validation and management.
+- **Ant Design**: A UI component library for faster development.
+
+---
+
+## 🚀 Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Young19ermi/A2SV-React-Learning-Phase.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd job-portal-website
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Run the development server:
+
+```bash
+npm run dev
+```
+
+5. Open your browser and visit:
+
+```bash
+http://localhost:3000
+```
