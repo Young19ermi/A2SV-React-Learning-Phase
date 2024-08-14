@@ -3,14 +3,13 @@
 A simple and efficient job portal built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This platform allows users to explore a variety of job positions, bookmark their favorites, and manage their accounts with seamless authentication and secure OTP verification.
 
 ## 📸 Screenshots of the Pages
+![Screenshot 2024-08-04 174353](https://github.com/user-attachments/assets/e264aac3-501e-430d-9507-a93ac2a99de3)
+![1](https://github.com/user-attachments/assets/97be4a7c-cf50-4667-9ade-12547e3dbf89)
 ![Screenshot 2024-08-14 130554](https://github.com/user-attachments/assets/6a3ad18d-ff1e-4278-9fca-672a69449339)
 ![Screenshot 2024-08-14 124841](https://github.com/user-attachments/assets/3e4828d5-a27b-4f97-a300-d0de510f11f0)
 ![Screenshot 2024-08-14 124801](https://github.com/user-attachments/assets/4ba853a3-a7d8-42ac-874d-2ebe1480795e)
 ![Screenshot 2024-08-14 124747](https://github.com/user-attachments/assets/e766f88a-c2e1-4a22-9a87-6816dddda28a)
 ![Screenshot 2024-08-14 124727](https://github.com/user-attachments/assets/2bbdefb9-9b8d-4010-b8fa-8ddb3ae50dcb)
-![Screenshot 2024-08-04 174353](https://github.com/user-attachments/assets/e264aac3-501e-430d-9507-a93ac2a99de3)
-![1](https://github.com/user-attachments/assets/97be4a7c-cf50-4667-9ade-12547e3dbf89)
-
 - **/jobs** - 🗒️ **Job Listings**  
   This page presents users with a comprehensive list of all available job positions. Each job listing contains key information such as the job title, company name, location, and a short description, making it easy for users to browse and find relevant opportunities. Users can scroll through the list and select any job to view further details.
 
